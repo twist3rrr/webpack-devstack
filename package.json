@@ -1,0 +1,24 @@
+{
+  "name": "webpack-devstack",
+  "version": "1.0.0",
+  "description": "frontend webpack devstack ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twist3rrr/webpack-devstack.git"
+  },
+  "keywords": [
+    "devstack",
+    "frontend",
+    "webpack"
+  ],
+  "author": "Roman Pylyp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twist3rrr/webpack-devstack/issues"
+  },
+  "homepage": "https://github.com/twist3rrr/webpack-devstack#readme"
+}
