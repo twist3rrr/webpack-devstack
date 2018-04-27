@@ -1,3 +1,3 @@
-const partial = require('./partial');
+import { consoleString } from './partial';
 
-partial.consoleString('Hello Webpack');
+consoleString('Hello Webpack');
