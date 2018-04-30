@@ -1,4 +1,9 @@
 body {
     $b-color: #ccc;
     background-color: $b-color;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
 }

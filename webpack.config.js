@@ -18,17 +18,17 @@ module.exports = {
                 loader: "babel-loader" 
             },
             {
-                test: /\.s?css$/,
+                test: /\.scss$/,
                 use: ExtractTextPlugin.extract({
                     use: [
                         {
-                        loader: 'css-loader',
+                            loader: 'css-loader',
                         },
                         {
-                        loader: 'postcss-loader',
+                            loader: 'postcss-loader',
                         },
                         {
-                        loader: 'sass-loader',
+                            loader: 'sass-loader',
                         },
                     ],
                 }),
@@ -41,7 +41,7 @@ module.exports = {
             template: path.resolve(__dirname, 'src', 'tpl', 'index.html')
         }),
         new ExtractTextPlugin({
-            filename: './[name].bundle.css'
+            filename: 'bundle.css'
         }),
     ]
 }
