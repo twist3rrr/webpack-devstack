@@ -1,10 +1,14 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+
+const isProduction = process.argv[2] === '-p'
+const isDevelopment = !isProduction;
 
 module.exports = {
-    mode: 'development',
-    devtool: 'source-map',
+    mode: isProduction ? 'production': 'development',
+    devtool: isDevelopment && 'source-map',
     entry: ['./src/js/index.js', './src/sass/index.scss' ],
     output: {
         filename: 'bundle.js',
@@ -43,5 +47,6 @@ module.exports = {
         new ExtractTextPlugin({
             filename: 'bundle.css'
         }),
+        new UglifyJsPlugin()
     ]
 }
