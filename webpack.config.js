@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const isProduction = process.argv[2] === '-p'
 const isDevelopment = !isProduction;
@@ -46,7 +45,6 @@ module.exports = {
         }),
         new ExtractTextPlugin({
             filename: 'bundle.css'
-        }),
-        new UglifyJsPlugin()
+        })
     ]
 }
